@@ -1,0 +1,114 @@
+import { Tip, Note } from '@/components/Callouts'
+import { NormalDistributionGraph } from '@/components/NormalDistributionGraph'
+
+export const metadata = {
+  title: 'Normalverteilung'
+}
+
+# Normalverteilung
+
+<Tip>
+  ### Kurzüberblick
+
+  - Symmetrische Glockenkurve, ganz zentral in der Statistik
+  - Beschreibt viele natürliche und technische Prozesse
+  - Wird durch zwei Parameter bestimmt: Mittelwert $\mu$ und Varianz $\sigma^2$
+  - Dichtefunktion: $f(x) = \frac\{1\}\{\sigma \sqrt\{2\pi\}\} \exp\!\left( -\frac\{(x - \mu)^2\}\{2\sigma^2\} \right)$
+</Tip>
+
+## Interaktive Visualisierung
+
+<NormalDistributionGraph />
+
+## Was ist die Normalverteilung?
+
+Die **Normalverteilung** ist eine der wichtigsten Wahrscheinlichkeitsverteilungen in der Mathematik und Statistik.
+Sie beschreibt, wie sich Werte einer Zufallsvariable in Form einer symmetrischen Glockenkurve verteilen.
+
+Eine normalverteilte Zufallsvariable $X$ wird beschrieben durch:
+
+$$
+X \sim \mathcal\{N\}(\mu, \sigma^2),
+$$
+
+wobei
+- $\mu$ der **Mittelwert** (Erwartungswert) ist und
+- $\sigma^2$ die **Varianz** (Streuung).
+
+Der Mittelwert kann jeder reelle Wert sein, während die Varianz immer positiv ist:
+
+$$
+\mu \in \mathbb\{R\}, \qquad \sigma^2 > 0.
+$$
+
+Je größer die Standardabweichung $\sigma$, desto weiter ist die Verteilung gestreut und desto flacher wird die Glockenkurve.
+Je kleiner $\sigma$, desto schmaler und höher wird sie.
+
+<Note>
+  #### Was ist die Varianz?
+
+  Die **Varianz** misst, wie stark die Werte einer Zufallsvariable im Durchschnitt vom Mittelwert abweichen.
+  Sie beschreibt also die **Streuung** der Daten.
+
+  Liegt die Varianz hoch, sind die Werte weit verteilt; liegt sie niedrig, liegen sie nah am Mittelwert.
+
+  Die Varianz wird mit $\sigma^2$ bezeichnet und ist immer positiv:
+  $$
+  \sigma^2 = \text\{Var\}(X).
+  $$
+
+  Die zugehörige **Standardabweichung** ist die Quadratwurzel der Varianz:
+
+  $$
+  \sigma = \sqrt\{\sigma^\{2\}\}
+  $$
+</Note>
+
+## Warum ist die Normalverteilung so wichtig?
+
+Die Normalverteilung tritt in der Natur und Statistik ständig auf.
+Der zentrale Grenzwertsatz erklärt, warum: Werden viele kleine, voneinander unabhängige
+Zufälligkeiten wiederholt, ergibt sich beinahe automatisch eine normalverteilte Gesamtwirkung.
+
+Beispiele:
+
+- Messwerte mit zufälligen Messfehlern
+- Größen oder Gewichte in einer Population
+- Durchschnittswerte aus vielen Einzelversuchen
+
+Viele statistische Methoden basieren daher auf der Normalverteilung oder nähern andere Verteilungen durch sie an.
+
+## Dichtefunktion der Normalverteilung
+
+Die Wahrscheinlichkeitsdichtefunktion einer normalverteilten Zufallsvariable $X$ lautet:
+
+$$
+f(x) = \frac\{1\}\{\sigma \sqrt\{2\pi\}\}
+\exp\!\left( -\frac\{(x - \mu)^2\}\{2\sigma^2\} \right).
+$$
+
+Sie ist stets symmetrisch um den Mittelwert $\mu$ und beschreibt die Form der bekannten Glockenkurve.
+
+<Note>
+  ## Standardnormalverteilung
+
+  Die **Standardnormalverteilung** ist ein Spezialfall der Normalverteilung.
+  Sie liegt vor, wenn
+  $$
+  \mu = 0 \qquad \text\{und\} \qquad \sigma = 1.
+  $$
+
+  Man bezeichnet sie mit
+  $$
+  Z \sim \mathcal\{N\}(0,\,1).
+  $$
+
+  Ihnen begegnet man besonders häufig, weil sich jede Normalverteilung durch Standardisierung in
+  eine Standardnormalverteilung umwandeln lässt.
+</Note>
+
+## Verbindung zu den Sigma-Regeln
+
+Die bekannten **Sigma-Regeln** geben an, wie viel Wahrscheinlichkeit innerhalb von $1$, $2$ oder $3$ Standardabweichungen vom Mittelwert liegt.
+
+Mehr dazu findest du auf der Seite zu den Sigma-Regeln.

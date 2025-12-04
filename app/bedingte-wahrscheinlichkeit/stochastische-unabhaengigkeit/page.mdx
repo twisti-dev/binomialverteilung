@@ -1,0 +1,20 @@
+import { Tip, Note, Check, Warning } from '@/components/Callouts'
+import { Accordion, AccordionGroup } from '@/components/Accordion'
+import { Steps, Step } from '@/components/Steps'
+import { Card, CardGroup, Columns } from '@/components/Card'
+import { Tooltip } from '@/components/Tooltip'
+import { Mermaid } from '@/components/Mermaid'
+import Image from 'next/image'
+
+export const metadata = {
+  title: 'Stochastische Unabhängigkeit'
+}
+
+> Ereignisse sind stochastisch unabhängig voneinander, wenn das Eintreten des einen Ergnisses die Wahrscheinlichkeit des Eintretens des anderen nicht beeinflusst.
+
+Für unabhängige Ereignisse gilt:
+
+$$
+P(A \mid B) = P(A) \space \text\\{oder\\} \space P(B \mid A) = P(B) \\
+P(A \cap B) = P(A) \cdot P(B)
+$$
