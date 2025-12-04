@@ -1,0 +1,36 @@
+import { Tip, Note, Check, Warning } from '@/components/Callouts'
+import { Accordion, AccordionGroup } from '@/components/Accordion'
+import { Steps, Step } from '@/components/Steps'
+import { Card, CardGroup, Columns } from '@/components/Card'
+import { Tooltip } from '@/components/Tooltip'
+import { Mermaid } from '@/components/Mermaid'
+import Image from 'next/image'
+
+export const metadata = {
+  title: 'Bedingte Wahrscheinlichkeit'
+}
+
+> Bedingte Wahrscheinlichkeit beschreibt, wie sich die Wahrscheinlichkeit eines Ereignisses ändert, wenn bereits bekannt, dass ein anderes Ereignis eingtreten ist.
+
+Die bedingte Wahrscheinlichkeit kann auf verschiedene Arten ausgedrückt werden:
+
+$$
+\boxed\\{P(A \mid B)\\} \qquad \boxed\\{P_B(A)\\}
+$$
+
+Hierbei tritt Ereignis $A$ **unter der Bedingung**, dass Ereignis $B$ bereits eingetreten ist, ein.
+
+<Note>
+  ### Formel
+
+  $$
+  P(A \mid B) = \frac\\{P(A \cap B)\\}\\{P(B)\\}
+  $$
+
+  - $A$: Ereignis, dessen Wahrscheinlichkeit man unter einer Bedingung bestimmen möchte.
+  - $B$: Erignis, das bereits **eingetreten** ist
+  - $P(A \mid B)$: Bedingte Wahrscheinlichkeit, dafür dass $A$ eintritt, **unter der Voraussetzung**, dass $B$ eingetreten ist
+  - $A \cap B $: Schnittmenge der Ereignisse; beide Ereignisse treten gleichzeitig ein
+  - $P(A \cap B)$: Wahrscheinlichkeit dafür, dass sowohl $A$ als auch $B$ eintreten
+  - $P(B)$: Wahrscheinlichkeit dafür, dass $B$ eintritt
+</Note>
